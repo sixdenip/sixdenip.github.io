@@ -13,7 +13,7 @@ badge_icon: "⚡"
   <!-- Technical Languages -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>💻</span> Programming Languages
+      <span>💻</span> <span data-i18n="skills.languages_title">Programming Languages</span>
     </h3>
     <div class="skill-badges">
       <span class="skill-pill">C++</span>
@@ -28,7 +28,7 @@ badge_icon: "⚡"
   <!-- Embedded & FPGA -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>🔌</span> Embedded &amp; FPGA
+      <span>🔌</span> <span data-i18n="skills.embedded_title">Embedded &amp; FPGA</span>
     </h3>
     <div class="skill-badges">
       <span class="skill-pill">FPGA</span>
@@ -44,7 +44,7 @@ badge_icon: "⚡"
   <!-- DBMS & Databases -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>🗄️</span> Databases &amp; DBMS
+      <span>🗄️</span> <span data-i18n="skills.dbms_title">Databases &amp; DBMS</span>
     </h3>
     <div class="skill-badges">
       <span class="skill-pill">MongoDB</span>
@@ -57,7 +57,7 @@ badge_icon: "⚡"
   <!-- Programming Flow & DevOps -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>⚙️</span> Programming Flow &amp; Tools
+      <span>⚙️</span> <span data-i18n="skills.flow_title">Programming Flow &amp; Tools</span>
     </h3>
     <div class="skill-badges">
       <span class="skill-pill">Git &amp; GitHub</span>
@@ -70,23 +70,23 @@ badge_icon: "⚡"
   <!-- Spoken Languages -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>🌐</span> Spoken Languages
+      <span>🌐</span> <span data-i18n="skills.spoken_title">Spoken Languages</span>
     </h3>
     <div class="skill-badges">
-      <span class="skill-pill"><strong>French:</strong> Native</span>
-      <span class="skill-pill"><strong>English:</strong> C1 (IELTS: 7, TOEIC: 975)</span>
-      <span class="skill-pill"><strong>Spanish:</strong> B1</span>
+      <span class="skill-pill" data-i18n="skills.spoken_fr"><strong>French:</strong> Native</span>
+      <span class="skill-pill" data-i18n="skills.spoken_en"><strong>English:</strong> C1 (IELTS: 7, TOEIC: 975)</span>
+      <span class="skill-pill" data-i18n="skills.spoken_es"><strong>Spanish:</strong> B1</span>
     </div>
   </div>
 
   <!-- Proud Of / Hackathon Awards -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>🏆</span> Proud Of &amp; Awards
+      <span>🏆</span> <span data-i18n="skills.proud_title">Proud Of &amp; Awards</span>
     </h3>
     <div class="skill-badges">
-      <span class="skill-pill">🥈 <strong>2nd Place:</strong> Renault Digital Hackathon 2019</span>
-      <span class="skill-pill">🥈 <strong>2nd Place:</strong> ENSEack 2020</span>
+      <span class="skill-pill" data-i18n="skills.award_1">🥈 <strong>2nd Place:</strong> Renault Digital Hackathon 2019</span>
+      <span class="skill-pill" data-i18n="skills.award_2">🥈 <strong>2nd Place:</strong> ENSEack 2020</span>
     </div>
   </div>
 

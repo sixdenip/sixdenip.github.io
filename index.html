@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Pierre-Louis Sixdenier | PhD Candidate Resume & Publications"
+title: "Pierre-Louis Sixdenier | Embedded Systems & Computer Science Researcher"
 ---
 
 {% include hero.html %}
@@ -13,11 +13,11 @@ title: "Pierre-Louis Sixdenier | PhD Candidate Resume & Publications"
         <header class="section-header">
           <div class="section-badge">
             {% if sec.badge_icon %}<span>{{ sec.badge_icon }}</span>{% endif %}
-            <span>{{ sec.badge | default: sec.title }}</span>
+            <span data-i18n="section.{{ sec.section_id }}.badge">{{ sec.badge | default: sec.title }}</span>
           </div>
-          <h2 class="section-title">{{ sec.title }}</h2>
+          <h2 class="section-title" data-i18n="section.{{ sec.section_id }}.title">{{ sec.title }}</h2>
           {% if sec.subtitle %}
-            <p class="section-subtitle">{{ sec.subtitle }}</p>
+            <p class="section-subtitle" data-i18n="section.{{ sec.section_id }}.subtitle">{{ sec.subtitle }}</p>
           {% endif %}
         </header>
 

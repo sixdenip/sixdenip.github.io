@@ -4,6 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initLanguage();
   initTheme();
   initScrollAnimations();
   initScrollSpy();
@@ -11,6 +12,78 @@ document.addEventListener("DOMContentLoaded", () => {
   initBibtexButtons();
   initHeaderScroll();
 });
+
+/* --------------------------------------------------------------------------
+   Language Switcher (EN, FR, DE) with LocalStorage
+   -------------------------------------------------------------------------- */
+function initLanguage() {
+  const langBtns = document.querySelectorAll(".lang-btn");
+  if (!langBtns.length) return;
+
+  const storedLang = localStorage.getItem("preferred_lang");
+  let defaultLang = "en";
+  if (!storedLang) {
+    const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    if (browserLang.startsWith("fr")) defaultLang = "fr";
+    else if (browserLang.startsWith("de")) defaultLang = "de";
+  }
+
+  const activeLang = storedLang || defaultLang;
+  setLanguage(activeLang);
+
+  langBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const selectedLang = btn.getAttribute("data-lang");
+      if (selectedLang) {
+        setLanguage(selectedLang);
+      }
+    });
+  });
+}
+
+function setLanguage(lang) {
+  if (!window.TRANSLATIONS || !window.TRANSLATIONS[lang]) return;
+
+  localStorage.setItem("preferred_lang", lang);
+  document.documentElement.setAttribute("lang", lang);
+
+  // Update button active state
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    if (btn.getAttribute("data-lang") === lang) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+
+  // Apply translations to all data-i18n elements
+  const dict = window.TRANSLATIONS[lang];
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key] !== undefined) {
+      el.innerHTML = dict[key];
+    }
+  });
+
+  // Also update data-i18n-title
+  document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-title");
+    if (dict[key] !== undefined) {
+      el.setAttribute("title", dict[key]);
+    }
+  });
+
+  // Also update data-i18n-placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (dict[key] !== undefined) {
+      el.setAttribute("placeholder", dict[key]);
+    }
+  });
+
+  // Dispatch custom event in case listeners exist
+  window.dispatchEvent(new CustomEvent("languageChanged", { detail: { language: lang } }));
+}
 
 /* --------------------------------------------------------------------------
    Theme Switcher (Dark / Light) with LocalStorage

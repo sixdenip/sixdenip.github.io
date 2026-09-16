@@ -9,12 +9,12 @@ badge_icon: "📚"
 ---
 
 <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
-  <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">
+  <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;" data-i18n="pub.indexed_in">
     Publications indexed in <strong>IEEE Xplore</strong>, <strong>ACM Digital Library</strong>, and <strong>DBLP</strong>.
   </p>
   <a href="{{ '/assets/papers.bib' | relative_url }}" download class="btn btn-secondary btn-sm" title="Download Complete BibTeX File">
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-    <span>Download papers.bib</span>
+    <span data-i18n="common.download_bib">Download papers.bib</span>
   </a>
 </div>
 
@@ -37,7 +37,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p1.abstract">
     <strong>Abstract:</strong> Investigates early-exit deep neural network (EE-NN) architecture search tailored for edge computing platforms powered by intermittent energy harvesting, dynamically selecting confidence-based early exits to preserve accuracy under fluctuating ambient power.
   </div>
 
@@ -50,7 +50,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2025early" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2025early">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2025early" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2025early,
   author    = {Sixdenier, Pierre-Louis and Deutel, Mark and Teich, J{\"u}rgen},
   title     = {Early-Exit Neural Architecture Search for Energy-Harvesting Edge Computing},
@@ -83,7 +83,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p2.abstract">
     <strong>Abstract:</strong> Proposes early-exit forecasting models allowing energy-harvesting edge sensors to anticipate the computational feasibility of inference branches across future harvesting windows.
   </div>
 
@@ -94,7 +94,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2026earlyexit" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2026earlyexit">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2026earlyexit" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2026earlyexit,
   author    = {Sixdenier, Pierre-Louis and Deutel, Mark and Wildermann, Stefan and Teich, J{\"u}rgen},
   title     = {Early-Exit Forecasting of Deep Neural Networks on Energy-Harvesting Edge Devices},
@@ -126,7 +126,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p3.abstract">
     <strong>Abstract:</strong> Introduces utility-aware transmission policies for battery-less or energy-harvesting IoT gateways, dynamically prioritizing high-entropy sensor streams over lossy wireless channels.
   </div>
 
@@ -136,7 +136,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2025ewsn" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2025ewsn">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2025ewsn" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2025ewsn,
   author    = {Sixdenier, Pierre-Louis and Arockiaraj, Jebacyril and Wildermann, Stefan and Teich, J{\"u}rgen},
   title     = {WiP Paper: Utility-Aware Transmission of Sensor Data on Energy-Harvesting IoT Gateways},
@@ -167,7 +167,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p4.abstract">
     <strong>Abstract:</strong> Formulates GRES, a scheduling algorithm guaranteeing that embedded sensors maintain a reserved residual energy budget across uncertain solar/kinetic harvesting cycles through continuous task quality adaptation.
   </div>
 
@@ -180,7 +180,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2024gres" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2024gres">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2024gres" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2024gres,
   author    = {Sixdenier, Pierre-Louis and Wildermann, Stefan and Teich, J{\"u}rgen},
   title     = {GRES: Guaranteed Remaining Energy Scheduling of Energy-harvesting Sensors by Quality Adaptation},
@@ -214,7 +214,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p5.abstract">
     <strong>Abstract:</strong> Combines evolutionary genetic algorithms with deep reinforcement learning to synthesize verifiable, reactive run-time requirement enforcers for multi-processor systems-on-chip under safety constraints.
   </div>
 
@@ -227,7 +227,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-spieck2023hybrid" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-spieck2023hybrid">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-spieck2023hybrid" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{spieck2023hybrid,
   author    = {Spieck, Jan and Sixdenier, Pierre-Louis and Esper, Khalil and Wildermann, Stefan and Teich, J{\"u}rgen},
   title     = {Hybrid Genetic Reinforcement Learning for Generating Run-Time Requirement Enforcers},
@@ -260,7 +260,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p6.abstract">
     <strong>Abstract:</strong> Presents Seque, an ultra-lean data storage and compression engine designed for energy-constrained IoT edge gateways, eliminating redundant I/O transactions to maximize battery lifetime.
   </div>
 
@@ -273,7 +273,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2023seque" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2023seque">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2023seque" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2023seque,
   author    = {Sixdenier, Pierre-Louis and Wildermann, Stefan and Ottens, Martin and Teich, J{\"u}rgen},
   title     = {Seque: Lean and Energy-aware Data Management for IoT Gateways},
@@ -307,7 +307,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p7.abstract">
     <strong>Abstract:</strong> Develops a reinforcement learning framework that synthesizes formally verifiable run-time enforcers for mixed-criticality multi-processor systems-on-chip.
   </div>
 
@@ -320,7 +320,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-esper2023raven" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-esper2023raven">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-esper2023raven" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{esper2023raven,
   author    = {Esper, Khalil and Spieck, Jan and Sixdenier, Pierre-Louis and Wildermann, Stefan and Teich, J{\"u}rgen},
   title     = {RAVEN: Reinforcement Learning for Generating Verifiable Run-Time Requirement Enforcers for MPSoCs},
@@ -355,7 +355,7 @@ badge_icon: "📚"
     <span>Jürgen Teich</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p8.abstract">
     <strong>Abstract:</strong> Introduces SIDAM, an automated multi-objective design space exploration tool evaluating heterogeneous sensor configurations and power conditioning circuits for energy-neutral operations.
   </div>
 
@@ -368,7 +368,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2022sidam" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2022sidam">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2022sidam" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2022sidam,
   author    = {Sixdenier, Pierre-Louis and Wildermann, Stefan and Ziegler, Daniel and Teich, J{\"u}rgen},
   title     = {SIDAM: A Design Space Exploration Framework for Multi-sensor Embedded Systems Powered by Energy Harvesting},
@@ -400,7 +400,7 @@ badge_icon: "📚"
     <span class="author-self">Pierre-Louis Sixdenier</span>
   </div>
 
-  <div class="pub-abstract">
+  <div class="pub-abstract" data-i18n="pub.p9.abstract">
     <strong>Abstract:</strong> Examines architectures for self-sustaining solar/ambient-powered IoT base stations, presenting adaptive power management heuristics for uninterrupted sensor ingestion.
   </div>
 
@@ -413,7 +413,7 @@ badge_icon: "📚"
   </div>
 
   <div id="bib-sixdenier2021towards" class="bibtex-block">
-    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2021towards">Copy</button>
+    <button class="btn btn-secondary btn-sm copy-bibtex-btn" data-copy-target="bib-sixdenier2021towards" data-i18n="common.copy">Copy</button>
 <code>@inproceedings{sixdenier2021towards,
   author    = {Sixdenier, Pierre-Louis},
   title     = {Towards an Autonomous, Power-Efficient Base Station for Sensor Data Collection},

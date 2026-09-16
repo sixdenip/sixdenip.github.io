@@ -192,7 +192,13 @@
   <!-- Top action buttons -->
   <div class="top-bar">
     <a href="{{ '/' | relative_url }}" class="top-btn">&larr; Back to Portfolio</a>
-    <div style="display: flex; gap: 0.5rem;">
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <!-- Language Switcher (EN, FR, DE) -->
+      <div style="display: inline-flex; border: 1px solid #000; border-radius: 2px; overflow: hidden; background: #fff;">
+        <button type="button" class="lang-btn active" data-lang="en" style="border: none; padding: 0.35rem 0.6rem; font-size: 8.5pt; font-weight: 700; cursor: pointer; background: #000; color: #fff;">EN</button>
+        <button type="button" class="lang-btn" data-lang="fr" style="border: none; padding: 0.35rem 0.6rem; font-size: 8.5pt; font-weight: 700; cursor: pointer; background: transparent; color: #000;">FR</button>
+        <button type="button" class="lang-btn" data-lang="de" style="border: none; padding: 0.35rem 0.6rem; font-size: 8.5pt; font-weight: 700; cursor: pointer; background: transparent; color: #000;">DE</button>
+      </div>
       <button onclick="window.print()" class="top-btn">Print Resume</button>
       <a href="{{ site.cv_pdf_url | default: '/assets/resume-pierre-louis-sixdenier.pdf' | relative_url }}" download class="top-btn top-btn-primary">Download PDF</a>
     </div>
@@ -422,5 +428,44 @@
 
   </main>
 
+  <script src="{{ '/assets/js/translations.js' | relative_url }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const langBtns = document.querySelectorAll(".lang-btn");
+      const storedLang = localStorage.getItem("preferred_lang") || "en";
+      applyResumeLang(storedLang);
+
+      langBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const lang = btn.getAttribute("data-lang");
+          if (lang) {
+            localStorage.setItem("preferred_lang", lang);
+            applyResumeLang(lang);
+          }
+        });
+      });
+
+      function applyResumeLang(lang) {
+        if (!window.TRANSLATIONS || !window.TRANSLATIONS[lang]) return;
+        const dict = window.TRANSLATIONS[lang];
+        langBtns.forEach(b => {
+          if (b.getAttribute("data-lang") === lang) {
+            b.style.background = "#000";
+            b.style.color = "#fff";
+          } else {
+            b.style.background = "transparent";
+            b.style.color = "#000";
+          }
+        });
+
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key] !== undefined) {
+            el.innerHTML = dict[key];
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

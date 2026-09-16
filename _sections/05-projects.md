@@ -8,7 +8,7 @@ badge: "Portfolio & Engineering"
 badge_icon: "💡"
 ---
 
-<h3 style="margin: 1rem 0 1rem; color: var(--text-main); font-size: 1.25rem;">🔧 Personal Projects</h3>
+<h3 style="margin: 1rem 0 1rem; color: var(--text-main); font-size: 1.25rem;" data-i18n="projects.personal_title">🔧 Personal Projects</h3>
 
 <div class="projects-grid">
 
@@ -23,8 +23,8 @@ badge_icon: "💡"
           </a>
         </div>
       </div>
-      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);">Smart Glasses</h4>
-      <p class="project-desc">
+      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);" data-i18n="projects.smart_glasses.name">Smart Glasses</h4>
+      <p class="project-desc" data-i18n="projects.smart_glasses.desc">
         A wearable Heads-Up Display (HUD) built on an OLED screen mounted directly onto glasses. Communicates with an Android device via Bluetooth Low Energy (BLE) to deliver turn-by-turn navigation assistance in real time.
       </p>
     </div>
@@ -48,8 +48,8 @@ badge_icon: "💡"
           </a>
         </div>
       </div>
-      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);">Pollution Advisor</h4>
-      <p class="project-desc">
+      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);" data-i18n="projects.pollution.name">Pollution Advisor</h4>
+      <p class="project-desc" data-i18n="projects.pollution.desc">
         A crowdsourced environmental monitoring solution consisting of a compact sensor-equipped Arduino device paired with an Android mobile app to collect, map, and open-source real-time urban air pollution data.
       </p>
     </div>
@@ -73,8 +73,8 @@ badge_icon: "💡"
           </a>
         </div>
       </div>
-      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);">Foot Angle Detector</h4>
-      <p class="project-desc">
+      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);" data-i18n="projects.foot_angle.name">Foot Angle Detector</h4>
+      <p class="project-desc" data-i18n="projects.foot_angle.desc">
         A therapeutic computer-vision Android application that calculates the biomechanical angle of a patient's foot placed on an ArUco calibration board, providing non-invasive diagnostic angles for medical and physical rehabilitation tracking.
       </p>
     </div>
@@ -88,7 +88,7 @@ badge_icon: "💡"
 
 </div>
 
-<h3 style="margin: 2.5rem 0 1rem; color: var(--text-main); font-size: 1.25rem;">🎓 Academic &amp; Research Projects</h3>
+<h3 style="margin: 2.5rem 0 1rem; color: var(--text-main); font-size: 1.25rem;" data-i18n="projects.academic_title">🎓 Academic &amp; Research Projects</h3>
 
 <div class="projects-grid">
 
@@ -103,8 +103,8 @@ badge_icon: "💡"
           </a>
         </div>
       </div>
-      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);">Spiking Neural Network on FPGA</h4>
-      <p class="project-desc">
+      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);" data-i18n="projects.snn.name">Spiking Neural Network on FPGA</h4>
+      <p class="project-desc" data-i18n="projects.snn.desc">
         Research, RTL modeling, and hardware simulation of a biologically inspired Spiking Neural Network (SNN) architecture implemented on FPGA for low-power, neuromorphic spike-based computation.
       </p>
     </div>
@@ -128,8 +128,8 @@ badge_icon: "💡"
           </a>
         </div>
       </div>
-      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);">&ldquo;La futée&rdquo; : Smart Car</h4>
-      <p class="project-desc">
+      <h4 class="project-name" style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--text-main);" data-i18n="projects.smart_car.name">&ldquo;La futée&rdquo; : Smart Car</h4>
+      <p class="project-desc" data-i18n="projects.smart_car.desc">
         An intelligent advanced driver-assistance system (ADAS) that anticipates forward hazards, obstacles, and collision risks using multi-sensor inputs to issue proactive real-time driver warnings.
       </p>
     </div>
