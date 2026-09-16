@@ -1,24 +1,25 @@
 # Site settings
 title: "Pierre-Louis Sixdenier"
-tagline: "PhD Candidate in Computer Science & Artificial Intelligence"
+tagline: "Computer Science & Embedded Systems Researcher &bull; PhD Candidate"
 author: "Pierre-Louis Sixdenier"
-email: "pierre-louis.sixdenier@example.edu"
-description: "Academic resume and portfolio of Pierre-Louis Sixdenier, PhD student researching Machine Learning and Computer Vision."
-url: "https://sixdenier.github.io"
+email: "pierre-louis.sixdenier@outlook.fr"
+phone: "+33 6 80 48 91 43"
+description: "Academic resume and portfolio of Pierre-Louis Sixdenier, PhD student in Computer Science and Embedded Systems."
+url: "https://sixdenip.github.io"
 baseurl: "" # Empty for root domain github pages (username.github.io)
 
 # Academic & Social Profiles
-affiliation: "Doctoral School of Computer Science"
-lab: "Vision & Learning Laboratory"
-location: "Paris, France"
+affiliation: "CY Cergy Paris University / ETIS Laboratory"
+lab: "Smart Electronic Systems"
+location: "France"
 cv_pdf_url: "/assets/resume-pierre-louis-sixdenier.pdf"
 
 social:
-  github: "sixdenier"
+  github: "sixdenip"
   linkedin: "pierre-louis-sixdenier"
   scholar: "https://scholar.google.com"
   orcid: "0000-0000-0000-0000"
-  email: "mailto:pierre-louis.sixdenier@example.edu"
+  email: "mailto:pierre-louis.sixdenier@outlook.fr"
   twitter: ""
 
 # Collections setup: Each section is generated from a Markdown file

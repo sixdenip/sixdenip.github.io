@@ -3,96 +3,124 @@ order: 2
 section_id: "experience"
 title: "Professional Experience"
 nav_title: "Experience"
-subtitle: "Doctoral research appointments, industry research internships, and teaching commitments."
+subtitle: "Industrial engineering positions, research lab internships, and professional appointments."
 badge: "Career History"
 badge_icon: "💼"
 ---
 
 <div class="timeline">
 
-  <!-- Experience Item 1 -->
+  <!-- Placeholder Job requested: November 2020 - May 2026 -->
   <div class="timeline-item">
     <div class="timeline-dot"></div>
-    <div class="timeline-card">
+    <div class="timeline-card" style="border-style: dashed; border-color: var(--card-hover-border);">
       <div class="timeline-header">
-        <h3 class="timeline-role">Graduate Research Assistant (PhD Candidate)</h3>
-        <span class="timeline-period">Oct 2023 &ndash; Present</span>
+        <h3 class="timeline-role">[Job Title Placeholder &bull; e.g. PhD Researcher / R&amp;D Engineer]</h3>
+        <span class="timeline-period">Nov 2020 &ndash; May 2026</span>
       </div>
       <div class="timeline-org">
-        <span>Vision &amp; Learning Laboratory</span>
-        <span class="timeline-location">&bull; Paris, France</span>
+        <span>[Company / Research Institution Placeholder]</span>
+        <span class="timeline-location">&bull; [Location Placeholder, France]</span>
       </div>
       <p class="timeline-desc">
-        Investigating novel self-supervised pretraining objectives for visual representation learning and multimodal reasoning under sparse supervision.
+        <em>[Placeholder: Describe your primary responsibilities, research topics, or engineering objectives during this period.]</em>
       </p>
       <ul class="timeline-bullets">
-        <li>Authored 3 conference publications accepted at top-tier venues (NeurIPS, CVPR).</li>
-        <li>Designed distributed PyTorch pre-training pipelines on clusters of 64+ NVIDIA H100 GPUs with DeepSpeed and FSDP.</li>
-        <li>Mentored 4 Master's and undergraduate students on research capstone projects.</li>
+        <li><strong>[Key Project / Thesis]:</strong> Detailed description of research or industrial project deliverables.</li>
+        <li><strong>[Methodology &amp; Architecture]:</strong> Hardware/software co-design, prototyping, and algorithm implementation.</li>
+        <li><strong>[Outcomes]:</strong> Publications, industrial patents, benchmarks, or deployed embedded platforms.</li>
       </ul>
       <div class="timeline-tags">
-        <span class="tag-pill">PyTorch</span>
-        <span class="tag-pill">Self-Supervised Learning</span>
-        <span class="tag-pill">Distributed Training</span>
-        <span class="tag-pill">HPC Clusters</span>
+        <span class="tag-pill">Placeholder</span>
+        <span class="tag-pill">Nov 2020 &ndash; May 2026</span>
+        <span class="tag-pill">Embedded Systems</span>
+        <span class="tag-pill">R&amp;D</span>
       </div>
     </div>
   </div>
 
-  <!-- Experience Item 2 -->
+  <!-- Experience Item: Safran Electronics & Defense -->
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
       <div class="timeline-header">
-        <h3 class="timeline-role">Research Scientist Intern</h3>
-        <span class="timeline-period">May 2024 &ndash; Sep 2024</span>
+        <h3 class="timeline-role">FPGA R&amp;D Engineer Intern</h3>
+        <span class="timeline-period">May 2020 &ndash; Nov 2020</span>
       </div>
       <div class="timeline-org">
-        <span>AI Research Labs (Meta / Google / Inria Placeholder)</span>
-        <span class="timeline-location">&bull; London, UK / Hybrid</span>
+        <span>Safran Electronics &amp; Defense</span>
+        <span class="timeline-location">&bull; France</span>
       </div>
       <p class="timeline-desc">
-        Collaborated with the Multimodal Foundations group on parameter-efficient fine-tuning and contrastive distillation methods for vision transformers.
+        Conception of a debugging streaming IP for an embedded low-power FPGA platform.
       </p>
       <ul class="timeline-bullets">
-        <li>Reduced downstream adaptation latency by 38% while retaining 99.2% zero-shot accuracy across 12 benchmarks.</li>
-        <li>Filed 1 patent application on token pruning mechanisms for streaming video architectures.</li>
-        <li>Presented findings internally to 150+ research scientists and submitted paper to ICLR.</li>
+        <li>Architected and implemented a custom streaming IP dedicated to non-intrusive live debugging on resource-constrained FPGAs.</li>
+        <li>Optimized resource utilization, timing closure, and power consumption for defense and aerospace embedded requirements.</li>
+        <li>Performed RTL simulation, verification testbenches, and on-board hardware validation.</li>
       </ul>
       <div class="timeline-tags">
-        <span class="tag-pill">Vision Transformers</span>
-        <span class="tag-pill">Model Distillation</span>
-        <span class="tag-pill">Token Pruning</span>
-        <span class="tag-pill">JAX / Flax</span>
+        <span class="tag-pill">FPGA</span>
+        <span class="tag-pill">VHDL</span>
+        <span class="tag-pill">Low-Power</span>
+        <span class="tag-pill">Streaming IP</span>
+        <span class="tag-pill">Vivado</span>
       </div>
     </div>
   </div>
 
-  <!-- Experience Item 3 -->
+  <!-- Experience Item: ETIS Laboratory -->
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-card">
       <div class="timeline-header">
-        <h3 class="timeline-role">Graduate Teaching Fellow</h3>
-        <span class="timeline-period">Sep 2022 &ndash; Jun 2023</span>
+        <h3 class="timeline-role">Research Intern</h3>
+        <span class="timeline-period">December 2018</span>
       </div>
       <div class="timeline-org">
-        <span>Department of Computer Science</span>
-        <span class="timeline-location">&bull; University Campus</span>
+        <span>ETIS Laboratory (Equipes Traitement de l'Information et Systèmes)</span>
+        <span class="timeline-location">&bull; Cergy, France</span>
       </div>
       <p class="timeline-desc">
-        Led laboratory sessions, delivered problem-solving tutorials, and co-created grading rubrics for graduate and upper-division undergraduate courses.
+        Conception and implementation of a failure detection system for robots.
       </p>
       <ul class="timeline-bullets">
-        <li><strong>CS-401 Deep Learning:</strong> Conducted weekly hands-on labs in PyTorch on CNNs, Transformers, and GANs (60 students).</li>
-        <li><strong>CS-202 Algorithms &amp; Data Structures:</strong> Headed recitations covering dynamic programming, graph algorithms, and asymptotic complexity (120 students).</li>
-        <li>Awarded Departmental Teaching Excellence Recognition for Spring 2023.</li>
+        <li>Investigated autonomous robotics anomaly detection algorithms based on sensor telemetry and internal state monitoring.</li>
+        <li>Developed a real-time detection prototype to prevent robotic failure and ensure operational reliability.</li>
       </ul>
       <div class="timeline-tags">
-        <span class="tag-pill">Pedagogy</span>
-        <span class="tag-pill">Deep Learning</span>
+        <span class="tag-pill">Robotics</span>
+        <span class="tag-pill">Failure Detection</span>
+        <span class="tag-pill">C++</span>
+        <span class="tag-pill">Sensor Telemetry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience Item: XLIM-SIC Laboratory -->
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <div class="timeline-header">
+        <h3 class="timeline-role">Research Intern</h3>
+        <span class="timeline-period">June 2017</span>
+      </div>
+      <div class="timeline-org">
+        <span>XLIM-SIC Laboratory</span>
+        <span class="timeline-location">&bull; Poitiers, France</span>
+      </div>
+      <p class="timeline-desc">
+        Conception of a proof-of-concept (PoC) on an L-System (Lindenmayer system) generator.
+      </p>
+      <ul class="timeline-bullets">
+        <li>Explored algorithmic procedural generation, rewriting grammars, and geometric visualization of fractals.</li>
+        <li>Implemented the generation engine and user interface for interactive rule testing.</li>
+      </ul>
+      <div class="timeline-tags">
+        <span class="tag-pill">L-System</span>
+        <span class="tag-pill">C++</span>
+        <span class="tag-pill">Procedural Generation</span>
         <span class="tag-pill">Algorithms</span>
-        <span class="tag-pill">PyTorch Labs</span>
       </div>
     </div>
   </div>

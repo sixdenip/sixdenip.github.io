@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate a black-and-white, clean and simple academic resume PDF
-summarizing the webpage content for Pierre-Louis Sixdenier.
+summarizing the updated information from Pierre-Louis Sixdenier's CV.
 """
 
 import os
@@ -13,14 +13,14 @@ from reportlab.lib import colors
 def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-    # 0.5 inch margins = 36 points for standard 1-2 page academic resume
+    # 0.45 in / 32 points margins for crisp, compact layout
     doc = SimpleDocTemplate(
         output_path,
         pagesize=letter,
-        leftMargin=36,
-        rightMargin=36,
-        topMargin=36,
-        bottomMargin=36
+        leftMargin=32,
+        rightMargin=32,
+        topMargin=30,
+        bottomMargin=30
     )
 
     styles = getSampleStyleSheet()
@@ -31,8 +31,8 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=18,
-        leading=22,
-        alignment=1, # Center
+        leading=21,
+        alignment=1,
         textColor=colors.black,
         textTransform='uppercase'
     )
@@ -40,7 +40,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
     sub_style = ParagraphStyle(
         'DocSub',
         parent=styles['Normal'],
-        fontName='Helvetica',
+        fontName='Helvetica-Bold',
         fontSize=10,
         leading=13,
         alignment=1,
@@ -62,9 +62,9 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=10,
-        leading=13,
+        leading=12,
         textColor=colors.black,
-        spaceBefore=7,
+        spaceBefore=6,
         spaceAfter=2,
         textTransform='uppercase'
     )
@@ -74,7 +74,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=9,
-        leading=11.5,
+        leading=11,
         textColor=colors.black
     )
 
@@ -83,7 +83,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=9,
-        leading=11.5,
+        leading=11,
         alignment=2,
         textColor=colors.black
     )
@@ -93,7 +93,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica-Oblique',
         fontSize=8.5,
-        leading=11,
+        leading=10.5,
         textColor=colors.black
     )
 
@@ -102,7 +102,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica',
         fontSize=8.5,
-        leading=11,
+        leading=10.5,
         alignment=2,
         textColor=colors.black
     )
@@ -112,12 +112,12 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica',
         fontSize=8.5,
-        leading=11,
+        leading=10.5,
         textColor=colors.black,
-        leftIndent=12,
+        leftIndent=11,
         firstLineIndent=-8,
-        spaceBefore=1,
-        spaceAfter=1
+        spaceBefore=0.5,
+        spaceAfter=0.5
     )
 
     body_style = ParagraphStyle(
@@ -125,7 +125,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         parent=styles['Normal'],
         fontName='Helvetica',
         fontSize=8.5,
-        leading=11,
+        leading=10.5,
         textColor=colors.black
     )
 
@@ -133,7 +133,7 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
         data = [[Paragraph(title_l, item_title_left), Paragraph(title_r, item_title_right)]]
         if sub_l or sub_r:
             data.append([Paragraph(sub_l, item_sub_left), Paragraph(sub_r, item_sub_right)])
-        t = Table(data, colWidths=[380, 160])
+        t = Table(data, colWidths=[390, 158])
         t.setStyle(TableStyle([
             ('LEFTPADDING', (0,0), (-1,-1), 0),
             ('RIGHTPADDING', (0,0), (-1,-1), 0),
@@ -145,138 +145,139 @@ def generate_pdf(output_path="assets/resume-pierre-louis-sixdenier.pdf"):
     def make_section_divider(title):
         return [
             Paragraph(title, section_heading),
-            HRFlowable(width='100%', thickness=0.75, color=colors.black, spaceBefore=1, spaceAfter=4)
+            HRFlowable(width='100%', thickness=0.75, color=colors.black, spaceBefore=1, spaceAfter=3)
         ]
 
     story = []
 
     # 1. Header (Black and White, Minimalist)
-    story.append(Paragraph('Pierre-Louis Sixdenier', name_style))
+    story.append(Paragraph('Pierre-Louis SIXDENIER', name_style))
     story.append(Spacer(1, 2))
-    story.append(Paragraph('PhD Candidate in Computer Science &amp; Artificial Intelligence', sub_style))
+    story.append(Paragraph('Embedded Systems Engineer &bull; PhD Candidate', sub_style))
     story.append(Spacer(1, 2))
     story.append(Paragraph(
-        'Paris, France &bull; pierre-louis.sixdenier@example.edu &bull; https://sixdenier.github.io &bull; github.com/sixdenier &bull; linkedin.com/in/pierre-louis-sixdenier',
+        'Nationality: French &bull; pierre-louis.sixdenier@outlook.fr &bull; +33 6 80 48 91 43 &bull; github.com/sixdenip &bull; linkedin.com/in/pierre-louis-sixdenier',
         contact_style
     ))
     story.append(Spacer(1, 3))
     story.append(HRFlowable(width='100%', thickness=1.2, color=colors.black, spaceBefore=2, spaceAfter=4))
 
-    # 2. Education
+    # 2. Professional Experience
+    story.extend(make_section_divider('Experience'))
+
+    # Placeholder Job requested: November 2020 - May 2026
+    story.append(make_header_row(
+        '[Job Title Placeholder &bull; e.g. PhD Researcher / R&amp;D Engineer]',
+        'November 2020 &ndash; May 2026',
+        '[Company / Research Institution / University Lab Placeholder]',
+        'France'
+    ))
+    story.append(Paragraph('&bull; <i>[Placeholder for research activities, engineering deliverables, or doctoral thesis work between Nov 2020 &ndash; May 2026].</i>', bullet_style))
+    story.append(Spacer(1, 3))
+
+    # Safran Electronics & Defense
+    story.append(make_header_row(
+        'FPGA R&amp;D Engineer Intern',
+        'May 2020 &ndash; Nov 2020',
+        'Safran Electronics &amp; Defense',
+        'France'
+    ))
+    story.append(Paragraph('&bull; Conception of a debugging streaming IP for an embedded low-power FPGA platform.', bullet_style))
+    story.append(Spacer(1, 3))
+
+    # ETIS Laboratory
+    story.append(make_header_row(
+        'Research Intern',
+        'December 2018',
+        'ETIS Laboratory (Equipes Traitement de l&#39;Information et Syst&egrave;mes)',
+        'Cergy, France'
+    ))
+    story.append(Paragraph('&bull; Conception and implementation of a failure detection system for robots.', bullet_style))
+    story.append(Spacer(1, 3))
+
+    # XLIM-SIC Laboratory
+    story.append(make_header_row(
+        'Research Intern',
+        'June 2017',
+        'XLIM-SIC Laboratory',
+        'Poitiers, France'
+    ))
+    story.append(Paragraph('&bull; Conception of a proof-of-concept (PoC) on an L-System generator.', bullet_style))
+    story.append(Spacer(1, 4))
+
+    # 3. Education
     story.extend(make_section_divider('Education'))
 
+    # PhD Candidate entry
     story.append(make_header_row(
         'Doctor of Philosophy (Ph.D.) in Computer Science',
-        '2023 &ndash; Present (Exp. 2026)',
-        'Vision &amp; Learning Laboratory &bull; Doctoral School',
-        'Paris, France'
-    ))
-    story.append(Paragraph('&bull; <b>Thesis:</b> <i>Scalable Self-Supervised Representations for Multimodal Perception in Low-Resource Regimes</i>', bullet_style))
-    story.append(Paragraph('&bull; <b>Advisors:</b> Prof. Jane Doe, Dr. Alex Martin &bull; <b>Honors:</b> Full National Doctoral Research Fellowship', bullet_style))
-    story.append(Spacer(1, 3))
-
-    story.append(make_header_row(
-        'M.Sc. in Computer Science &amp; Artificial Intelligence',
-        '2021 &ndash; 2023',
-        'Institute of Technology &bull; Faculty of Sciences',
+        '2020 &ndash; 2026 (Exp.)',
+        '[Doctoral School / Research Lab Placeholder]',
         'France'
     ))
-    story.append(Paragraph('&bull; <b>Graduation:</b> Summa Cum Laude (Rank 1st / 85, GPA: 4.0/4.0) &bull; <b>Thesis:</b> Geometric Deep Learning for 3D Segmentation', bullet_style))
+    story.append(Paragraph('&bull; Research in Embedded Systems, Hardware Acceleration &amp; Intelligent Sensor Computing.', bullet_style))
     story.append(Spacer(1, 3))
 
+    # Master
     story.append(make_header_row(
-        'B.Sc. in Mathematics and Computer Science',
-        '2018 &ndash; 2021',
-        'University Faculty of Exact Sciences',
-        'France'
+        'Master in Computer Science',
+        '2018 &ndash; 2020',
+        'CY Cergy Paris University',
+        'Cergy, France'
     ))
-    story.append(Paragraph('&bull; <b>Graduation:</b> First-Class Honors (Mention Tr&egrave;s Bien) &bull; Dean&#39;s Honor List across all semesters', bullet_style))
+    story.append(Paragraph('&bull; <b>Top-ranking of the research program in Smart Electronic Systems.</b> Advanced curriculum in FPGA, VHDL, and embedded systems.', bullet_style))
+    story.append(Spacer(1, 3))
+
+    # Exchange program
+    story.append(make_header_row(
+        'Exchange Program &bull; Computer Science',
+        '2017 &ndash; 2018',
+        'Oregon State University',
+        'Corvallis, OR, USA'
+    ))
+    story.append(Paragraph('&bull; Followed CS classes and gave French lessons to undergraduate students.', bullet_style))
+    story.append(Spacer(1, 3))
+
+    # Licence
+    story.append(make_header_row(
+        'Licence in Computer Science',
+        '2015 &ndash; 2018',
+        'University of Poitiers',
+        'Poitiers, France'
+    ))
+    story.append(Paragraph('&bull; Graduated with high honors.', bullet_style))
     story.append(Spacer(1, 4))
 
-    # 3. Professional Experience
-    story.extend(make_section_divider('Professional Experience'))
-
-    story.append(make_header_row(
-        'Graduate Research Assistant (PhD Candidate)',
-        'Oct 2023 &ndash; Present',
-        'Vision &amp; Learning Laboratory',
-        'Paris, France'
-    ))
-    story.append(Paragraph('&bull; Investigated self-supervised pre-training objectives for visual representation learning and multimodal reasoning.', bullet_style))
-    story.append(Paragraph('&bull; Scaled distributed training workflows across 64+ NVIDIA H100 GPUs using PyTorch FSDP and DeepSpeed.', bullet_style))
-    story.append(Paragraph('&bull; Mentored 4 Master&#39;s and undergraduate students on machine learning research projects.', bullet_style))
-    story.append(Spacer(1, 3))
-
-    story.append(make_header_row(
-        'Research Scientist Intern',
-        'May 2024 &ndash; Sep 2024',
-        'AI Research Labs (Multimodal Foundations)',
-        'London, UK / Hybrid'
-    ))
-    story.append(Paragraph('&bull; Developed parameter-efficient fine-tuning and contrastive distillation algorithms for vision transformers.', bullet_style))
-    story.append(Paragraph('&bull; Reduced inference latency by 38% while retaining 99.2% zero-shot accuracy across 12 vision benchmarks.', bullet_style))
-    story.append(Paragraph('&bull; Filed 1 patent on token pruning mechanisms for streaming multimodal architectures.', bullet_style))
-    story.append(Spacer(1, 3))
-
-    story.append(make_header_row(
-        'Graduate Teaching Fellow',
-        'Sep 2022 &ndash; Jun 2023',
-        'Department of Computer Science',
-        'University Campus'
-    ))
-    story.append(Paragraph('&bull; Headed lab recitations for CS-401 Deep Learning (60 students) and CS-202 Algorithms &amp; Data Structures (120 students).', bullet_style))
-    story.append(Spacer(1, 4))
-
-    # 4. Selected Publications
-    story.extend(make_section_divider('Selected Scientific Publications'))
+    # 4. Projects
+    story.extend(make_section_divider('Projects'))
 
     story.append(Paragraph(
-        '<b>[1] Contrastive Representation Learning with Adaptive Geometry for Low-Resource Multimodal Tasks</b><br/>'
-        '<b><u>Pierre-Louis Sixdenier</u></b>, Jane Doe, Alex Martin.<br/>'
-        '<i>Advances in Neural Information Processing Systems (<b>NeurIPS 2025</b>)</i> &ndash; <b>Spotlight</b>',
+        '<b>Personal Projects:</b><br/>'
+        '&bull; <b>Smart glasses:</b> An HUD on an OLED screen mounted on glasses communicating with an Android device through BLE for navigation assistance.<br/>'
+        '&bull; <b>Pollution advisor:</b> An Android app and a small Arduino device with sensors to crowdsource an open database about pollution of cities.<br/>'
+        '&bull; <b>Foot angle detector:</b> An Android app that computes the angle of someone&#39;s foot on an ArUco board (therapeutic use).',
         body_style
     ))
     story.append(Spacer(1, 3))
 
     story.append(Paragraph(
-        '<b>[2] Token-Sparse Vision Transformers: Adaptive Computation for Real-Time Dense Prediction</b><br/>'
-        'Lucas Bernard, <b><u>Pierre-Louis Sixdenier</u></b>, Elena Rossi, Jane Doe.<br/>'
-        '<i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR 2025</b>)</i> &ndash; <b>Oral Presentation</b>',
-        body_style
-    ))
-    story.append(Spacer(1, 3))
-
-    story.append(Paragraph(
-        '<b>[3] Provable Convergence Bounds for Gradient-Based Self-Distillation in Deep Ensembles</b><br/>'
-        '<b><u>Pierre-Louis Sixdenier</u></b>, Alex Martin.<br/>'
-        '<i>International Conference on Learning Representations (<b>ICLR 2024</b>)</i>',
+        '<b>Academic Projects:</b><br/>'
+        '&bull; <b>Spiking Neural Network on FPGA:</b> Research and simulation of a Spiking Neural Network (SNN) on an FPGA platform.<br/>'
+        '&bull; <b>&ldquo;La fut&eacute;e&rdquo; &ndash; Smart Car:</b> A driving assistance system that anticipates dangers ahead through sensors and warns the user.',
         body_style
     ))
     story.append(Spacer(1, 4))
 
-    # 5. Side Projects
-    story.extend(make_section_divider('Side Projects &amp; Software Tooling'))
+    # 5. Skills & Recognitions
+    story.extend(make_section_divider('Skills &amp; Recognitions'))
 
     story.append(Paragraph(
-        '&bull; <b>FastVisionBench:</b> High-throughput benchmarking harness for few-shot representation quality across 18 datasets in &lt;15 min. (Python, PyTorch, Distributed)',
-        bullet_style
-    ))
-    story.append(Paragraph(
-        '&bull; <b>LatentManifold.js:</b> WebAssembly &amp; WebGL interactive 3D browser visualizer for t-SNE, UMAP, and PCA in real time. (TypeScript, Three.js, Wasm)',
-        bullet_style
-    ))
-    story.append(Paragraph(
-        '&bull; <b>AutoBibSync:</b> Automated CI tool synchronizing DBLP, arXiv, and Google Scholar into validated BibTeX collections. (Python CLI, GitHub Actions)',
-        bullet_style
-    ))
-    story.append(Spacer(1, 4))
-
-    # 6. Skills & Service
-    story.extend(make_section_divider('Technical Skills &amp; Academic Service'))
-
-    story.append(Paragraph(
-        '<b>Technical Stack:</b> Python (Expert), C/C++, CUDA, PyTorch, JAX/Flax, DeepSpeed, FSDP, Linux, SLURM, Docker, Git, LaTeX.<br/>'
-        '<b>Academic Service:</b> Reviewer for <b>NeurIPS</b> (2024, 2025), <b>CVPR</b> (2025), <b>ICLR</b> (2025); ECCV Workshop Co-Organizer.',
+        '<b>Technical Languages:</b> C++, C, VHDL, Python, Node.js, HTML/CSS<br/>'
+        '<b>DBMS:</b> MongoDB, Neo4J, PostgreSQL, MySQL<br/>'
+        '<b>Embedded &amp; FPGA:</b> Arduino, STM32 (Keil &micro;Vision), Vivado, Quartus<br/>'
+        '<b>Programming Flow:</b> Git, Docker, UML<br/>'
+        '<b>Spoken Languages:</b> French (Native), English (C1 / IELTS: 7 / TOEIC: 975), Spanish (B1)<br/>'
+        '<b>Proud of:</b> 2<sup>nd</sup> place at Renault Digital Hackathon 2019 &bull; 2<sup>nd</sup> place at ENSEack 2020',
         body_style
     ))
 

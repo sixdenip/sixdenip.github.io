@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pierre-Louis Sixdenier - Academic Resume (Curriculum Vitae)</title>
-  <meta name="description" content="Academic Resume of Pierre-Louis Sixdenier, PhD Candidate in Computer Science & Artificial Intelligence.">
+  <meta name="description" content="Resume of Pierre-Louis Sixdenier, Embedded Systems Engineer & PhD Student.">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/avatar.svg' | relative_url }}">
 
   <style>
@@ -25,7 +25,7 @@
       background-color: #f5f5f5;
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 10.5pt;
+      font-size: 10pt;
       line-height: 1.45;
       padding: 2rem 1rem;
     }
@@ -95,13 +95,13 @@
 
     .resume-title {
       font-size: 11pt;
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 0.35rem;
     }
 
     .resume-contact {
       font-size: 9pt;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .resume-contact a {
@@ -123,7 +123,7 @@
 
     /* Section Headings */
     .section-title {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -140,7 +140,7 @@
       justify-content: space-between;
       align-items: baseline;
       font-weight: 700;
-      font-size: 10pt;
+      font-size: 9.5pt;
     }
 
     .item-sub {
@@ -148,41 +148,18 @@
       justify-content: space-between;
       align-items: baseline;
       font-style: italic;
-      font-size: 9.5pt;
+      font-size: 9pt;
       margin-bottom: 0.25rem;
     }
 
     ul.item-bullets {
       list-style-type: disc;
       padding-left: 1.2rem;
-      font-size: 9.5pt;
+      font-size: 9pt;
     }
 
     ul.item-bullets li {
       margin-bottom: 0.2rem;
-    }
-
-    /* Publications */
-    .pub-entry {
-      margin-bottom: 0.75rem;
-      font-size: 9.5pt;
-    }
-
-    .pub-title {
-      font-weight: 700;
-    }
-
-    .pub-authors {
-      margin: 0.1rem 0;
-    }
-
-    .author-self {
-      text-decoration: underline;
-      font-weight: 600;
-    }
-
-    .pub-venue {
-      font-style: italic;
     }
 
     /* Print Styles */
@@ -225,18 +202,81 @@
 
     <!-- Header -->
     <header class="resume-header">
-      <h1 class="resume-name">Pierre-Louis Sixdenier</h1>
-      <div class="resume-title">PhD Candidate in Computer Science &amp; Artificial Intelligence</div>
+      <h1 class="resume-name">Pierre-Louis SIXDENIER</h1>
+      <div class="resume-title">Embedded Systems Engineer &bull; PhD Candidate</div>
       <div class="resume-contact">
-        Paris, France &bull; 
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a> &bull; 
-        <a href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a> &bull; 
-        github.com/{{ site.social.github }} &bull; 
-        linkedin.com/in/{{ site.social.linkedin }}
+        Nationality: French &bull; 
+        <a href="mailto:pierre-louis.sixdenier@outlook.fr">pierre-louis.sixdenier@outlook.fr</a> &bull; 
+        <a href="tel:+33680489143">+33 6 80 48 91 43</a> &bull; 
+        <a href="https://github.com/sixdenip">github.com/sixdenip</a> &bull; 
+        <a href="https://linkedin.com/in/pierre-louis-sixdenier">linkedin.com/in/pierre-louis-sixdenier</a>
       </div>
     </header>
 
     <hr class="header-rule">
+
+    <!-- Experience -->
+    <section>
+      <h2 class="section-title">Experience</h2>
+      <hr>
+
+      <!-- Requested Placeholder Job -->
+      <div class="resume-item">
+        <div class="item-header">
+          <span>[Job Title Placeholder &bull; e.g. PhD Researcher / R&amp;D Engineer]</span>
+          <span>November 2020 &ndash; May 2026</span>
+        </div>
+        <div class="item-sub">
+          <span>[Company / Research Institution / University Lab Placeholder]</span>
+          <span>France</span>
+        </div>
+        <ul class="item-bullets">
+          <li><em>[Placeholder for responsibilities, doctoral research, and engineering deliverables between Nov 2020 &ndash; May 2026].</em></li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <div class="item-header">
+          <span>FPGA R&amp;D Engineer intern</span>
+          <span>May 2020 &ndash; Nov 2020</span>
+        </div>
+        <div class="item-sub">
+          <span>Safran Electronics &amp; Defense</span>
+          <span>France</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Conception of a debugging streaming IP for an embedded low-power FPGA platform.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <div class="item-header">
+          <span>Research intern</span>
+          <span>December 2018</span>
+        </div>
+        <div class="item-sub">
+          <span>ETIS laboratory</span>
+          <span>Cergy, France</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Conception and implementation of a failure detection system for robots.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <div class="item-header">
+          <span>Research intern</span>
+          <span>June 2017</span>
+        </div>
+        <div class="item-sub">
+          <span>XLIM-SIC Laboratory</span>
+          <span>Poitiers, France</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Conception of a POC on an L-System generator.</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Education -->
     <section>
@@ -245,148 +285,78 @@
 
       <div class="resume-item">
         <div class="item-header">
-          <span>Doctor of Philosophy (Ph.D.) in Computer Science</span>
-          <span>2023 &ndash; Present (Exp. 2026)</span>
+          <span>CY Cergy Paris University</span>
+          <span>2018 &ndash; 2020</span>
         </div>
         <div class="item-sub">
-          <span>Vision &amp; Learning Laboratory &bull; Doctoral School</span>
-          <span>Paris, France</span>
+          <span>Master in Computer Science</span>
+          <span>Cergy, France</span>
         </div>
         <ul class="item-bullets">
-          <li><strong>Dissertation:</strong> <em>Scalable Self-Supervised Representations for Multimodal Perception in Low-Resource Regimes</em></li>
-          <li><strong>Advisors:</strong> Prof. Jane Doe, Dr. Alex Martin</li>
-          <li><strong>Honors:</strong> Awarded Full National Doctoral Research Fellowship (3-year research stipend &amp; travel grant).</li>
+          <li><strong>Top-ranking of the research program in Smart Electronic Systems.</strong></li>
         </ul>
       </div>
 
       <div class="resume-item">
         <div class="item-header">
-          <span>Master of Science (M.Sc.) in Computer Science &amp; AI</span>
-          <span>2021 &ndash; 2023</span>
+          <span>Oregon State University</span>
+          <span>2017 &ndash; 2018</span>
         </div>
         <div class="item-sub">
-          <span>Institute of Technology &bull; Faculty of Sciences</span>
-          <span>France</span>
+          <span>Exchange program</span>
+          <span>Corvallis, OR, USA</span>
         </div>
         <ul class="item-bullets">
-          <li><strong>Graduation:</strong> Summa Cum Laude (Rank 1st / 85 students, GPA: 4.0 / 4.0).</li>
-          <li><strong>Master's Thesis:</strong> <em>Geometric Deep Learning for 3D Point Cloud Segmentation</em> &ndash; Evaluated with highest honors.</li>
+          <li>Followed CS class and gave French lessons.</li>
         </ul>
       </div>
 
       <div class="resume-item">
         <div class="item-header">
-          <span>Bachelor of Science (B.Sc.) in Mathematics and Computer Science</span>
-          <span>2018 &ndash; 2021</span>
+          <span>University of Poitiers</span>
+          <span>2015 &ndash; 2018</span>
         </div>
         <div class="item-sub">
-          <span>University Faculty of Exact Sciences</span>
-          <span>France</span>
+          <span>Licence in Computer Science</span>
+          <span>Poitiers, France</span>
         </div>
         <ul class="item-bullets">
-          <li><strong>Graduation:</strong> First-Class Honors (Mention Très Bien) &bull; Dean's Honor List for 6 consecutive academic terms.</li>
+          <li>Graduated with high honors.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Professional Experience -->
+    <!-- Projects -->
     <section>
-      <h2 class="section-title">Professional Experience</h2>
+      <h2 class="section-title">Projects</h2>
       <hr>
 
-      <div class="resume-item">
-        <div class="item-header">
-          <span>Graduate Research Assistant (PhD Candidate)</span>
-          <span>Oct 2023 &ndash; Present</span>
-        </div>
-        <div class="item-sub">
-          <span>Vision &amp; Learning Laboratory</span>
-          <span>Paris, France</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Investigating novel self-supervised pre-training objectives for visual representation learning and multimodal reasoning.</li>
-          <li>Authored 3 peer-reviewed conference publications accepted at top-tier venues (NeurIPS, CVPR).</li>
-          <li>Implemented distributed PyTorch pipelines across 64+ NVIDIA H100 GPUs with DeepSpeed and FSDP.</li>
-          <li>Mentored 4 Master's and undergraduate students on machine learning research projects.</li>
-        </ul>
-      </div>
+      <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 9.5pt;">Personal</div>
+      <ul class="item-bullets" style="margin-bottom: 0.75rem;">
+        <li><strong>Smart glasses:</strong> An HUD on an OLED screen mounted on glasses communicating with an Android device through BLE for navigation assistance.</li>
+        <li><strong>Pollution advisor:</strong> An Android app and a small Arduino device with sensors to crowdsource an open database about pollution of cities.</li>
+        <li><strong>Foot angle detector:</strong> An Android app that computes the angle of someone’s foot on an ArUco board (therapeutic use).</li>
+      </ul>
 
-      <div class="resume-item">
-        <div class="item-header">
-          <span>Research Scientist Intern</span>
-          <span>May 2024 &ndash; Sep 2024</span>
-        </div>
-        <div class="item-sub">
-          <span>AI Research Labs (Multimodal Foundations Group)</span>
-          <span>London, UK / Hybrid</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Investigated parameter-efficient fine-tuning and contrastive distillation algorithms for vision transformers.</li>
-          <li>Decreased downstream adaptation latency by 38% while retaining 99.2% zero-shot accuracy across 12 vision benchmarks.</li>
-          <li>Filed 1 patent on token pruning mechanisms for streaming video architectures.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="item-header">
-          <span>Graduate Teaching Fellow</span>
-          <span>Sep 2022 &ndash; Jun 2023</span>
-        </div>
-        <div class="item-sub">
-          <span>Department of Computer Science &bull; University Campus</span>
-          <span>France</span>
-        </div>
-        <ul class="item-bullets">
-          <li><strong>CS-401 Deep Learning:</strong> Led weekly laboratory recitations in PyTorch covering CNNs, Transformers, and GANs (60 students).</li>
-          <li><strong>CS-202 Algorithms &amp; Data Structures:</strong> Headed recitations covering dynamic programming and complexity (120 students).</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Scientific Papers -->
-    <section>
-      <h2 class="section-title">Selected Scientific Publications</h2>
-      <hr>
-
-      <div class="pub-entry">
-        <div class="pub-title">[1] Contrastive Representation Learning with Adaptive Geometry for Low-Resource Multimodal Tasks</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Jane Doe, Alex Martin.</div>
-        <div class="pub-venue">Advances in Neural Information Processing Systems (<strong>NeurIPS 2025</strong>) &ndash; <strong>Spotlight Presentation</strong>.</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[2] Token-Sparse Vision Transformers: Adaptive Computation for Real-Time Dense Prediction</div>
-        <div class="pub-authors">Lucas Bernard, <span class="author-self">Pierre-Louis Sixdenier</span>, Elena Rossi, Jane Doe.</div>
-        <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR 2025</strong>) &ndash; <strong>Oral Presentation</strong>.</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[3] Provable Convergence Bounds for Gradient-Based Self-Distillation in Deep Ensembles</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Alex Martin.</div>
-        <div class="pub-venue">International Conference on Learning Representations (<strong>ICLR 2024</strong>).</div>
-      </div>
-    </section>
-
-    <!-- Side Projects -->
-    <section>
-      <h2 class="section-title">Side Projects &amp; Software Tooling</h2>
-      <hr>
-
+      <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 9.5pt;">Academic</div>
       <ul class="item-bullets">
-        <li><strong>FastVisionBench:</strong> Modular benchmarking harness for few-shot visual representation quality across 18 datasets in &lt;15 minutes. <em>(Python, PyTorch, Distributed)</em></li>
-        <li><strong>LatentManifold.js:</strong> WebAssembly &amp; WebGL interactive 3D browser visualizer for high-dimensional manifolds (t-SNE, UMAP, PCA). <em>(TypeScript, Three.js, Wasm)</em></li>
-        <li><strong>AutoBibSync:</strong> Automated CLI and GitHub Action synchronizing DBLP, arXiv, and Google Scholar into clean BibTeX collections. <em>(Python CLI, GitHub Actions)</em></li>
+        <li><strong>Spiking Neural Network on FPGA:</strong> Research and simulation of a SNN on an FPGA platform.</li>
+        <li><strong>&ldquo;La futée&rdquo; : Smart Car:</strong> A driving assistance system that anticipates dangers ahead through sensors and warns the user.</li>
       </ul>
     </section>
 
-    <!-- Technical Skills & Service -->
+    <!-- Skills & Recognitions -->
     <section>
-      <h2 class="section-title">Technical Skills &amp; Academic Service</h2>
+      <h2 class="section-title">Skills &amp; Recognitions</h2>
       <hr>
 
       <ul class="item-bullets">
-        <li><strong>Technical Stack:</strong> Python (Expert), C/C++, CUDA, PyTorch, JAX/Flax, DeepSpeed, FSDP, Linux SysAdmin, SLURM, Docker, Git, LaTeX.</li>
-        <li><strong>Academic Reviewer:</strong> NeurIPS (2024, 2025), CVPR (2025), ICLR (2025); ECCV Workshop Co-Organizer.</li>
+        <li><strong>Technical Languages:</strong> C++, C, VHDL, Python, Node.js, HTML/CSS</li>
+        <li><strong>DBMS:</strong> MongoDB, Neo4J, PostgreSQL, MySQL</li>
+        <li><strong>Embedded &amp; FPGA:</strong> Arduino, STM32 (Keil &micro;Vision), Vivado, Quartus</li>
+        <li><strong>Programming Flow:</strong> Git, Docker, UML</li>
+        <li><strong>Spoken Languages:</strong> French (Native), English (C1 / IELTS: 7 / TOEIC: 975), Spanish (B1)</li>
+        <li><strong>Proud of:</strong> 2<sup>nd</sup> place at Renault Digital Hackathon 2019 &bull; 2<sup>nd</sup> place at ENSEack 2020</li>
       </ul>
     </section>
 

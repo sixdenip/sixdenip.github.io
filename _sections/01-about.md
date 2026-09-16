@@ -3,34 +3,38 @@ order: 1
 section_id: "about"
 title: "About Me"
 nav_title: "About"
-subtitle: "Doctoral researcher passionate about deep learning, computer vision, and scalable representations."
+subtitle: "Embedded Systems Engineer & Computer Science Doctoral Student passionate about FPGA, neuromorphic hardware, and smart connected devices."
 badge: "Biography"
 badge_icon: "👋"
 ---
 
-I am a **PhD candidate** in Computer Science at the **Vision & Learning Laboratory**, advised by Prof. Jane Doe and Dr. Alex Martin. My research centers at the intersection of **Deep Learning**, **Computer Vision**, and **Self-Supervised Representation Learning**, with a particular focus on sample efficiency, multimodal foundation models, and robust generalization.
+I am a **Computer Science & Embedded Systems Engineer and PhD Student**, specializing in **Embedded Systems**, **FPGA Acceleration**, **Low-Power Platforms**, and **Smart Connected Systems**. 
 
-Before starting my doctoral studies, I graduated with highest honors from École Polytechnique / Master in Data Science. I have completed research internships at leading research institutions and tech companies, working on large-scale generative models and vision-language alignment.
+I completed my **Master in Computer Science** at **CY Cergy Paris University**, graduating top of my class in the research track for *Smart Electronic Systems*, following an exchange program at **Oregon State University** (USA) and a **Licence in Computer Science** with high honors from the **University of Poitiers**. My work spans hardware-software co-design, ranging from research on Spiking Neural Networks (SNN) on FPGA, failure detection systems for robotics (ETIS laboratory), to streaming IP debugging on low-power FPGAs at **Safran Electronics & Defense**.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
   <div class="stat-item" style="text-align: left; padding: 1.5rem;">
-    <h4 style="margin: 0 0 0.5rem; color: var(--accent-primary);">🎯 Research Interests</h4>
+    <h4 style="margin: 0 0 0.5rem; color: var(--accent-primary);">🎯 Core Interests</h4>
     <ul style="margin: 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem;">
-      <li>Self-Supervised & Multimodal Learning</li>
-      <li>Efficient Neural Architectures & ViTs</li>
-      <li>Geometric Deep Learning & 3D Vision</li>
-      <li>Robustness, Interpretability & Generalization</li>
+      <li>FPGA Architecture &amp; R&amp;D (VHDL, Vivado, Quartus)</li>
+      <li>Embedded Systems &amp; Firmware (C/C++, STM32, Arduino)</li>
+      <li>Neuromorphic Computing &amp; Spiking Neural Networks (SNN)</li>
+      <li>Robotics, Sensor Fusion &amp; Driving Assistance Systems</li>
+      <li>Low-Power Computing &amp; IoT Solutions</li>
     </ul>
   </div>
 
   <div class="stat-item" style="text-align: left; padding: 1.5rem;">
-    <h4 style="margin: 0 0 0.5rem; color: var(--accent-secondary);">📬 Contact & Collaborations</h4>
+    <h4 style="margin: 0 0 0.5rem; color: var(--accent-secondary);">📬 Contact Details</h4>
     <p style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--text-muted);">
-      I am always excited to discuss research collaborations, academic exchanges, and prospective postdoc or research scientist roles.
+      Feel free to reach out for research inquiries, technical discussions, or collaboration opportunities.
     </p>
-    <p style="margin: 0; font-size: 0.95rem;">
-      <strong>Office:</strong> Lab 402, Turing Building<br>
-      <strong>Email:</strong> <a href="mailto:pierre-louis.sixdenier@example.edu">pierre-louis.sixdenier@example.edu</a>
+    <p style="margin: 0; font-size: 0.95rem; line-height: 1.7;">
+      <strong>Nationality:</strong> French<br>
+      <strong>Email:</strong> <a href="mailto:pierre-louis.sixdenier@outlook.fr">pierre-louis.sixdenier@outlook.fr</a><br>
+      <strong>Phone:</strong> <a href="tel:+33680489143">+33 6 80 48 91 43</a><br>
+      <strong>GitHub:</strong> <a href="https://github.com/sixdenip" target="_blank" rel="noopener">github.com/sixdenip</a><br>
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/pierre-louis-sixdenier" target="_blank" rel="noopener">linkedin.com/in/pierre-louis-sixdenier</a>
     </p>
   </div>
 </div>

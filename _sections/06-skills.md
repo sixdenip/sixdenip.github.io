@@ -1,75 +1,92 @@
 ---
 order: 6
 section_id: "skills"
-title: "Skills & Academic Service"
-nav_title: "Skills & Service"
-subtitle: "Technical competencies, scientific frameworks, and community contributions."
-badge: "Expertise"
+title: "Skills, Languages & Recognitions"
+nav_title: "Skills"
+subtitle: "Technical competencies, embedded hardware tools, languages, and competitive hackathon achievements."
+badge: "Expertise & Honors"
 badge_icon: "⚡"
 ---
 
 <div class="skills-grid">
 
-  <!-- Core ML & AI -->
-  <div class="skill-card">
-    <h3 class="skill-card-title">
-      <span>🧠</span> Machine Learning &amp; AI
-    </h3>
-    <div class="skill-badges">
-      <span class="skill-pill">PyTorch</span>
-      <span class="skill-pill">JAX / Flax</span>
-      <span class="skill-pill">TorchVision</span>
-      <span class="skill-pill">Hugging Face Transformers</span>
-      <span class="skill-pill">DeepSpeed</span>
-      <span class="skill-pill">FSDP</span>
-      <span class="skill-pill">Timm</span>
-      <span class="skill-pill">scikit-learn</span>
-    </div>
-  </div>
-
-  <!-- Programming Languages -->
+  <!-- Technical Languages -->
   <div class="skill-card">
     <h3 class="skill-card-title">
       <span>💻</span> Programming Languages
     </h3>
     <div class="skill-badges">
-      <span class="skill-pill">Python (Expert)</span>
-      <span class="skill-pill">C / C++</span>
-      <span class="skill-pill">CUDA</span>
-      <span class="skill-pill">Bash / Linux</span>
-      <span class="skill-pill">SQL</span>
-      <span class="skill-pill">TypeScript / JavaScript</span>
-      <span class="skill-pill">MATLAB</span>
+      <span class="skill-pill">C++</span>
+      <span class="skill-pill">C</span>
+      <span class="skill-pill">VHDL</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">HTML / CSS</span>
     </div>
   </div>
 
-  <!-- HPC, Systems & Infrastructure -->
+  <!-- Embedded & FPGA -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>⚙️</span> Systems &amp; Tooling
+      <span>🔌</span> Embedded &amp; FPGA
     </h3>
     <div class="skill-badges">
-      <span class="skill-pill">SLURM Clusters</span>
-      <span class="skill-pill">Docker &amp; Singularity</span>
-      <span class="skill-pill">Git / GitHub CI</span>
-      <span class="skill-pill">Weights &amp; Biases</span>
-      <span class="skill-pill">TensorBoard</span>
-      <span class="skill-pill">Linux SysAdmin</span>
-      <span class="skill-pill">LaTeX / TikZ</span>
+      <span class="skill-pill">FPGA</span>
+      <span class="skill-pill">Vivado (Xilinx)</span>
+      <span class="skill-pill">Quartus (Intel/Altera)</span>
+      <span class="skill-pill">STM32 (Keil &micro;Vision)</span>
+      <span class="skill-pill">Arduino</span>
+      <span class="skill-pill">BLE / Bluetooth</span>
+      <span class="skill-pill">Sensors &amp; Actuators</span>
     </div>
   </div>
 
-  <!-- Academic Service -->
+  <!-- DBMS & Databases -->
   <div class="skill-card">
     <h3 class="skill-card-title">
-      <span>🤝</span> Academic Service &amp; Reviewing
+      <span>🗄️</span> Databases &amp; DBMS
     </h3>
     <div class="skill-badges">
-      <span class="skill-pill">NeurIPS Reviewer (2024, 2025)</span>
-      <span class="skill-pill">CVPR Reviewer (2025)</span>
-      <span class="skill-pill">ICLR Reviewer (2025)</span>
-      <span class="skill-pill">ECCV Workshop Co-Organizer</span>
-      <span class="skill-pill">Doctoral Student Representative</span>
+      <span class="skill-pill">MongoDB</span>
+      <span class="skill-pill">Neo4J</span>
+      <span class="skill-pill">PostgreSQL</span>
+      <span class="skill-pill">MySQL</span>
+    </div>
+  </div>
+
+  <!-- Programming Flow & DevOps -->
+  <div class="skill-card">
+    <h3 class="skill-card-title">
+      <span>⚙️</span> Programming Flow &amp; Tools
+    </h3>
+    <div class="skill-badges">
+      <span class="skill-pill">Git &amp; GitHub</span>
+      <span class="skill-pill">Docker</span>
+      <span class="skill-pill">UML Design</span>
+      <span class="skill-pill">Linux / Shell</span>
+    </div>
+  </div>
+
+  <!-- Spoken Languages -->
+  <div class="skill-card">
+    <h3 class="skill-card-title">
+      <span>🌐</span> Spoken Languages
+    </h3>
+    <div class="skill-badges">
+      <span class="skill-pill"><strong>French:</strong> Native</span>
+      <span class="skill-pill"><strong>English:</strong> C1 (IELTS: 7, TOEIC: 975)</span>
+      <span class="skill-pill"><strong>Spanish:</strong> B1</span>
+    </div>
+  </div>
+
+  <!-- Proud Of / Hackathon Awards -->
+  <div class="skill-card">
+    <h3 class="skill-card-title">
+      <span>🏆</span> Proud Of &amp; Awards
+    </h3>
+    <div class="skill-badges">
+      <span class="skill-pill">🥈 <strong>2nd Place:</strong> Renault Digital Hackathon 2019</span>
+      <span class="skill-pill">🥈 <strong>2nd Place:</strong> ENSEack 2020</span>
     </div>
   </div>
 
