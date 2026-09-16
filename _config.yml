@@ -11,7 +11,7 @@ baseurl: "" # Empty for root domain github pages (username.github.io)
 affiliation: "Doctoral School of Computer Science"
 lab: "Vision & Learning Laboratory"
 location: "Paris, France"
-cv_pdf_url: "#" # Link to CV PDF (e.g., assets/cv_pierre_louis_sixdenier.pdf)
+cv_pdf_url: "/assets/resume-pierre-louis-sixdenier.pdf"
 
 social:
   github: "sixdenier"

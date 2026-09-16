@@ -1297,6 +1297,9 @@ pre code {
 }
 
 @media (max-width: 580px) {
+  .nav-actions .btn-sm span {
+    display: none;
+  }
   .hero-title {
     font-size: 2.25rem;
   }
