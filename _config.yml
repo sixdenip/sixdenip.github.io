@@ -1,0 +1,51 @@
+# Site settings
+title: "Pierre-Louis Sixdenier"
+tagline: "PhD Candidate in Computer Science & Artificial Intelligence"
+author: "Pierre-Louis Sixdenier"
+email: "pierre-louis.sixdenier@example.edu"
+description: "Academic resume and portfolio of Pierre-Louis Sixdenier, PhD student researching Machine Learning and Computer Vision."
+url: "https://sixdenier.github.io"
+baseurl: "" # Empty for root domain github pages (username.github.io)
+
+# Academic & Social Profiles
+affiliation: "Doctoral School of Computer Science"
+lab: "Vision & Learning Laboratory"
+location: "Paris, France"
+cv_pdf_url: "#" # Link to CV PDF (e.g., assets/cv_pierre_louis_sixdenier.pdf)
+
+social:
+  github: "sixdenier"
+  linkedin: "pierre-louis-sixdenier"
+  scholar: "https://scholar.google.com"
+  orcid: "0000-0000-0000-0000"
+  email: "mailto:pierre-louis.sixdenier@example.edu"
+  twitter: ""
+
+# Collections setup: Each section is generated from a Markdown file
+collections:
+  sections:
+    output: false
+    sort_by: order
+
+# Markdown & Syntax Highlighting
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Files to exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - vendor

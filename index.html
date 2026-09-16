@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Pierre-Louis Sixdenier | PhD Candidate Resume & Publications"
+---
+
+{% include hero.html %}
+
+{% assign sorted_sections = site.sections | sort: "order" %}
+{% for sec in sorted_sections %}
+  {% if sec.enabled != false %}
+    <section id="{{ sec.section_id }}" class="resume-section" data-animate="fade-up">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            {% if sec.badge_icon %}<span>{{ sec.badge_icon }}</span>{% endif %}
+            <span>{{ sec.badge | default: sec.title }}</span>
+          </div>
+          <h2 class="section-title">{{ sec.title }}</h2>
+          {% if sec.subtitle %}
+            <p class="section-subtitle">{{ sec.subtitle }}</p>
+          {% endif %}
+        </header>
+
+        <div class="section-content markdown-body">
+          {{ sec.content | markdownify }}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}
