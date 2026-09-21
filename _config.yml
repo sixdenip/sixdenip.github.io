@@ -22,9 +22,27 @@ social:
   email: "mailto:pierre-louis.sixdenier@outlook.fr"
   twitter: ""
 
-# Collections setup: Each section is generated from a Markdown file
+# Collections setup: Each section and each item is generated from a Markdown file
 collections:
   sections:
+    output: false
+    sort_by: order
+  about:
+    output: false
+    sort_by: order
+  experience:
+    output: false
+    sort_by: order
+  education:
+    output: false
+    sort_by: order
+  projects:
+    output: false
+    sort_by: order
+  publications:
+    output: false
+    sort_by: order
+  skills:
     output: false
     sort_by: order
 

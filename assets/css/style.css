@@ -346,6 +346,17 @@ pre code {
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
+/* Multilingual Item Filtering: Show active language items, hide inactive */
+html[lang="en"] .lang-item:not([data-lang="en"]),
+html[lang="fr"] .lang-item:not([data-lang="fr"]),
+html[lang="de"] .lang-item:not([data-lang="de"]) {
+  display: none !important;
+}
+
+html:not([lang="fr"]):not([lang="de"]) .lang-item:not([data-lang="en"]) {
+  display: none !important;
+}
+
 /* Theme toggle button */
 .theme-toggle {
   background: transparent;

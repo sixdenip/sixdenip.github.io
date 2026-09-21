@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +31,17 @@
       font-size: 10pt;
       line-height: 1.45;
       padding: 2rem 1rem;
+    }
+
+    /* Multilingual Item Filtering: Show active language items, hide others */
+    html[lang="en"] .lang-item:not([data-lang="en"]),
+    html[lang="fr"] .lang-item:not([data-lang="fr"]),
+    html[lang="de"] .lang-item:not([data-lang="de"]) {
+      display: none !important;
+    }
+
+    html:not([lang="fr"]):not([lang="de"]) .lang-item:not([data-lang="en"]) {
+      display: none !important;
     }
 
     /* Top Action Bar (hidden when printing) */
@@ -101,22 +115,28 @@
 
     .resume-contact {
       font-size: 9pt;
-      line-height: 1.45;
+      color: #333333;
+      line-height: 1.6;
     }
 
     .resume-contact a {
       color: #000000;
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 1px dotted #666666;
     }
 
-    /* Horizontal Dividers */
+    .resume-contact a:hover {
+      border-bottom-style: solid;
+    }
+
+    /* Horizontal Rules */
     hr {
-      border: 0;
+      border: none;
       border-top: 1px solid var(--rule);
-      margin: 0.35rem 0 0.85rem 0;
+      margin: 0.35rem 0 0.75rem 0;
     }
 
-    .header-rule {
+    hr.header-rule {
       border-top: 1.5px solid var(--rule);
       margin: 0.6rem 0 1.25rem 0;
     }
@@ -152,14 +172,41 @@
       margin-bottom: 0.25rem;
     }
 
-    ul.item-bullets {
+    ul.item-bullets,
+    .item-bullets ul {
       list-style-type: disc;
       padding-left: 1.2rem;
       font-size: 9pt;
     }
 
-    ul.item-bullets li {
+    ul.item-bullets li,
+    .item-bullets ul li {
       margin-bottom: 0.2rem;
+    }
+
+    .item-bullets p {
+      margin-bottom: 0.3rem;
+      font-size: 9pt;
+    }
+
+    /* Publications */
+    .pub-entry {
+      margin-bottom: 0.6rem;
+      font-size: 9pt;
+      line-height: 1.35;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-authors {
+      font-size: 8.8pt;
+    }
+
+    .pub-venue {
+      font-style: italic;
+      font-size: 8.5pt;
     }
 
     /* Print Styles */
@@ -209,9 +256,8 @@
     <!-- Header -->
     <header class="resume-header">
       <h1 class="resume-name">Pierre-Louis SIXDENIER</h1>
-      <div class="resume-title">Embedded Systems Engineer &bull; PhD Candidate</div>
+      <div class="resume-title" data-i18n="hero.tagline">Computer Science &amp; Embedded Systems Researcher &bull; PhD Candidate</div>
       <div class="resume-contact">
-        Nationality: French &bull; 
         <a href="mailto:pierre-louis.sixdenier@outlook.fr">pierre-louis.sixdenier@outlook.fr</a> &bull; 
         <a href="tel:+33680489143">+33 6 80 48 91 43</a> &bull; 
         <a href="https://github.com/sixdenip">github.com/sixdenip</a> &bull; 
@@ -223,206 +269,106 @@
 
     <!-- Experience -->
     <section>
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title" data-i18n="section.experience.title">Professional Experience</h2>
       <hr>
 
-      <!-- Requested Placeholder Job -->
-      <div class="resume-item">
+      {% assign sorted_exp = site.experience | sort: "order" %}
+      {% for item in sorted_exp %}
+      <div class="resume-item lang-item" data-lang="{{ item.lang }}">
         <div class="item-header">
-          <span>[Job Title Placeholder &bull; e.g. PhD Researcher / R&amp;D Engineer]</span>
-          <span>November 2020 &ndash; May 2026</span>
+          <span>{{ item.role }}</span>
+          <span>{{ item.period }}</span>
         </div>
         <div class="item-sub">
-          <span>[Company / Research Institution / University Lab Placeholder]</span>
-          <span>France</span>
+          <span>{{ item.organization }}</span>
+          <span>{{ item.location }}</span>
         </div>
-        <ul class="item-bullets">
-          <li><em>[Placeholder for responsibilities, doctoral research, and engineering deliverables between Nov 2020 &ndash; May 2026].</em></li>
-        </ul>
+        <div class="item-bullets">
+          {{ item.content | markdownify }}
+        </div>
       </div>
-
-      <div class="resume-item">
-        <div class="item-header">
-          <span>FPGA R&amp;D Engineer intern</span>
-          <span>May 2020 &ndash; Nov 2020</span>
-        </div>
-        <div class="item-sub">
-          <span>Safran Electronics &amp; Defense</span>
-          <span>France</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Conception of a debugging streaming IP for an embedded low-power FPGA platform.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="item-header">
-          <span>Research intern</span>
-          <span>December 2018</span>
-        </div>
-        <div class="item-sub">
-          <span>ETIS laboratory</span>
-          <span>Cergy, France</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Conception and implementation of a failure detection system for robots.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="item-header">
-          <span>Research intern</span>
-          <span>June 2017</span>
-        </div>
-        <div class="item-sub">
-          <span>XLIM-SIC Laboratory</span>
-          <span>Poitiers, France</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Conception of a POC on an L-System generator.</li>
-        </ul>
-      </div>
+      {% endfor %}
     </section>
 
     <!-- Education -->
     <section>
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title" data-i18n="section.education.title">Academic Background</h2>
       <hr>
 
-      <div class="resume-item">
+      {% assign sorted_edu = site.education | sort: "order" %}
+      {% for item in sorted_edu %}
+      <div class="resume-item lang-item" data-lang="{{ item.lang }}">
         <div class="item-header">
-          <span>CY Cergy Paris University</span>
-          <span>2018 &ndash; 2020</span>
+          <span>{{ item.degree }}</span>
+          <span>{{ item.period }}</span>
         </div>
         <div class="item-sub">
-          <span>Master in Computer Science</span>
-          <span>Cergy, France</span>
+          <span>{{ item.institution }}</span>
+          <span>{{ item.location }}</span>
         </div>
-        <ul class="item-bullets">
-          <li><strong>Top-ranking of the research program in Smart Electronic Systems.</strong></li>
-        </ul>
+        <div class="item-bullets">
+          {{ item.content | markdownify }}
+        </div>
       </div>
-
-      <div class="resume-item">
-        <div class="item-header">
-          <span>Oregon State University</span>
-          <span>2017 &ndash; 2018</span>
-        </div>
-        <div class="item-sub">
-          <span>Exchange program</span>
-          <span>Corvallis, OR, USA</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Followed CS class and gave French lessons.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="item-header">
-          <span>University of Poitiers</span>
-          <span>2015 &ndash; 2018</span>
-        </div>
-        <div class="item-sub">
-          <span>Licence in Computer Science</span>
-          <span>Poitiers, France</span>
-        </div>
-        <ul class="item-bullets">
-          <li>Graduated with high honors.</li>
-        </ul>
-      </div>
+      {% endfor %}
     </section>
 
     <!-- Publications -->
     <section>
-      <h2 class="section-title">Publications (Peer-Reviewed)</h2>
+      <h2 class="section-title" data-i18n="section.publications.title">Scientific Papers &amp; Publications</h2>
       <hr>
 
-      <div class="pub-entry">
-        <div class="pub-title">[1] Early-Exit Neural Architecture Search for Energy-Harvesting Edge Computing</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Mark Deutel, Jürgen Teich.</div>
-        <div class="pub-venue">IEEE 18th Int. Symposium on Embedded Multicore/Many-core Systems-on-Chip (<strong>MCSoC 2025</strong>) &ndash; <strong>Best Paper Award</strong>.</div>
+      {% assign sorted_pubs = site.publications | sort: "order" %}
+      {% for item in sorted_pubs %}
+      <div class="pub-entry lang-item" data-lang="{{ item.lang }}">
+        <div class="pub-title">[{{ item.order }}] {{ item.title }}</div>
+        <div class="pub-authors">{{ item.authors }}.</div>
+        <div class="pub-venue">{{ item.venue }}.</div>
       </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[2] Early-Exit Forecasting of Deep Neural Networks on Energy-Harvesting Edge Devices</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Mark Deutel, Stefan Wildermann, Jürgen Teich.</div>
-        <div class="pub-venue">7th Int. Workshop on IoT, Edge, and Mobile for Embedded Machine Learning (<strong>ITEM @ ECML-PKDD 2026</strong>).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[3] WiP Paper: Utility-Aware Transmission of Sensor Data on Energy-Harvesting IoT Gateways</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Jebacyril Arockiaraj, Stefan Wildermann, Jürgen Teich.</div>
-        <div class="pub-venue">22nd Int. Conf. on Embedded Wireless Systems and Networks (<strong>EWSN 2025</strong>).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[4] GRES: Guaranteed Remaining Energy Scheduling of Energy-harvesting Sensors by Quality Adaptation</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Stefan Wildermann, Jürgen Teich.</div>
-        <div class="pub-venue">13th Mediterranean Conference on Embedded Computing (<strong>MECO 2024</strong>).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[5] Hybrid Genetic Reinforcement Learning for Generating Run-Time Requirement Enforcers</div>
-        <div class="pub-authors">Jan Spieck, <span class="author-self">Pierre-Louis Sixdenier</span>, Khalil Esper, Stefan Wildermann, Jürgen Teich.</div>
-        <div class="pub-venue">21st ACM-IEEE Int. Symposium on Formal Methods and Models for System Design (<strong>MEMOCODE 2023</strong>).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[6] Seque: Lean and Energy-aware Data Management for IoT Gateways</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Stefan Wildermann, Martin Ottens, Jürgen Teich.</div>
-        <div class="pub-venue">IEEE Int. Conference on Edge Computing and Communications (<strong>EDGE 2023</strong>).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[7] RAVEN: Reinforcement Learning for Generating Verifiable Run-Time Requirement Enforcers for MPSoCs</div>
-        <div class="pub-authors">Khalil Esper, Jan Spieck, <span class="author-self">Pierre-Louis Sixdenier</span>, Stefan Wildermann, Jürgen Teich.</div>
-        <div class="pub-venue">4th Workshop on Next Generation Real-Time Embedded Systems (<strong>NG-RES 2023</strong>).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[8] SIDAM: A Design Space Exploration Framework for Multi-sensor Embedded Systems Powered by Energy Harvesting</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>, Stefan Wildermann, Daniel Ziegler, Jürgen Teich.</div>
-        <div class="pub-venue">Embedded Computer Systems: Architectures, Modeling, and Simulation (<strong>SAMOS XXII</strong>, Springer LNCS 2022).</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">[9] Towards an Autonomous, Power-Efficient Base Station for Sensor Data Collection</div>
-        <div class="pub-authors"><span class="author-self">Pierre-Louis Sixdenier</span>.</div>
-        <div class="pub-venue">2021 IEEE Autonomic Computing and Self-Organizing Systems Companion (<strong>ACSOS-C 2021</strong>).</div>
-      </div>
+      {% endfor %}
     </section>
 
     <!-- Projects -->
     <section>
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title" data-i18n="section.projects.title">Projects &amp; Hardware Prototypes</h2>
       <hr>
 
-      <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 9.5pt;">Personal</div>
+      <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 9.5pt;" data-i18n="section.projects.personal_title">🔧 Personal Projects</div>
       <ul class="item-bullets" style="margin-bottom: 0.75rem;">
-        <li><strong>Smart glasses:</strong> An HUD on an OLED screen mounted on glasses communicating with an Android device through BLE for navigation assistance.</li>
-        <li><strong>Pollution advisor:</strong> An Android app and a small Arduino device with sensors to crowdsource an open database about pollution of cities.</li>
-        <li><strong>Foot angle detector:</strong> An Android app that computes the angle of someone’s foot on an ArUco board (therapeutic use).</li>
+      {% assign sorted_proj = site.projects | sort: "order" %}
+      {% for item in sorted_proj %}
+        {% if item.category == "personal" %}
+        <li class="lang-item" data-lang="{{ item.lang }}">
+          <strong>{{ item.title }}:</strong> {{ item.content | strip }}
+        </li>
+        {% endif %}
+      {% endfor %}
       </ul>
 
-      <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 9.5pt;">Academic</div>
+      <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 9.5pt;" data-i18n="section.projects.academic_title">🎓 Academic &amp; Research Projects</div>
       <ul class="item-bullets">
-        <li><strong>Spiking Neural Network on FPGA:</strong> Research and simulation of a SNN on an FPGA platform.</li>
-        <li><strong>&ldquo;La futée&rdquo; : Smart Car:</strong> A driving assistance system that anticipates dangers ahead through sensors and warns the user.</li>
+      {% for item in sorted_proj %}
+        {% if item.category == "academic" %}
+        <li class="lang-item" data-lang="{{ item.lang }}">
+          <strong>{{ item.title }}:</strong> {{ item.content | strip }}
+        </li>
+        {% endif %}
+      {% endfor %}
       </ul>
     </section>
 
     <!-- Skills & Recognitions -->
     <section>
-      <h2 class="section-title">Skills &amp; Recognitions</h2>
+      <h2 class="section-title" data-i18n="section.skills.title">Skills, Languages &amp; Recognitions</h2>
       <hr>
 
       <ul class="item-bullets">
-        <li><strong>Technical Languages:</strong> C++, C, VHDL, Python, Node.js, HTML/CSS</li>
-        <li><strong>DBMS:</strong> MongoDB, Neo4J, PostgreSQL, MySQL</li>
-        <li><strong>Embedded &amp; FPGA:</strong> Arduino, STM32 (Keil &micro;Vision), Vivado, Quartus</li>
-        <li><strong>Programming Flow:</strong> Git, Docker, UML</li>
-        <li><strong>Spoken Languages:</strong> French (Native), English (C1 / IELTS: 7 / TOEIC: 975), Spanish (B1)</li>
-        <li><strong>Proud of:</strong> 2<sup>nd</sup> place at Renault Digital Hackathon 2019 &bull; 2<sup>nd</sup> place at ENSEack 2020</li>
+      {% assign sorted_skills = site.skills | sort: "order" %}
+      {% for item in sorted_skills %}
+        <li class="lang-item" data-lang="{{ item.lang }}">
+          <strong>{{ item.title }}:</strong> {{ item.skills | join: " &bull; " }}
+        </li>
+      {% endfor %}
       </ul>
     </section>
 
@@ -446,8 +392,9 @@
       });
 
       function applyResumeLang(lang) {
-        if (!window.TRANSLATIONS || !window.TRANSLATIONS[lang]) return;
-        const dict = window.TRANSLATIONS[lang];
+        if (!lang) lang = "en";
+        document.documentElement.setAttribute("lang", lang);
+
         langBtns.forEach(b => {
           if (b.getAttribute("data-lang") === lang) {
             b.style.background = "#000";
@@ -458,12 +405,16 @@
           }
         });
 
-        document.querySelectorAll("[data-i18n]").forEach(el => {
-          const key = el.getAttribute("data-i18n");
-          if (dict[key] !== undefined) {
-            el.innerHTML = dict[key];
-          }
-        });
+        // Apply translations to section titles using data-i18n
+        if (window.TRANSLATIONS && window.TRANSLATIONS[lang]) {
+          const dict = window.TRANSLATIONS[lang];
+          document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+            if (dict[key] !== undefined) {
+              el.innerHTML = dict[key];
+            }
+          });
+        }
       }
     });
   </script>
